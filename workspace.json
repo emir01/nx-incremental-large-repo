@@ -9,7 +9,7 @@
       "prefix": "largerepo",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:webpack-browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/apps/app0",
             "index": "apps/app0/src/index.html",
@@ -17,8 +17,13 @@
             "polyfills": "apps/app0/src/polyfills.ts",
             "tsConfig": "apps/app0/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/app0/src/favicon.ico", "apps/app0/src/assets"],
-            "styles": ["apps/app0/src/styles.css"],
+            "assets": [
+              "apps/app0/src/favicon.ico",
+              "apps/app0/src/assets"
+            ],
+            "styles": [
+              "apps/app0/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -53,13 +58,17 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/web:file-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "buildTarget": "app0:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "app0:build:production"
+              "buildTarget": "app0:build:production",
+              "browserTarget": "nx-experiment-app:build:production"
+            },
+            "development": {
+              "browserTarget": "nx-experiment-app:build:development"
             }
           }
         },
@@ -84,7 +93,9 @@
             "jestConfig": "apps/app0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/app0"]
+          "outputs": [
+            "coverage/apps/app0"
+          ]
         }
       }
     },
@@ -104,8 +115,13 @@
             "polyfills": "apps/app1/src/polyfills.ts",
             "tsConfig": "apps/app1/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/app1/src/favicon.ico", "apps/app1/src/assets"],
-            "styles": ["apps/app1/src/styles.css"],
+            "assets": [
+              "apps/app1/src/favicon.ico",
+              "apps/app1/src/assets"
+            ],
+            "styles": [
+              "apps/app1/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -137,7 +153,9 @@
               ]
             }
           },
-          "outputs": ["{options.outputPath}"]
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -171,7 +189,9 @@
             "jestConfig": "apps/app1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/app1"]
+          "outputs": [
+            "coverage/apps/app1"
+          ]
         }
       }
     },
@@ -208,7 +228,9 @@
             "jestConfig": "libs/app0/lib0/lib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/lib0"]
+          "outputs": [
+            "coverage/libs/app0/lib0/lib0"
+          ]
         }
       },
       "schematics": {}
@@ -246,7 +268,9 @@
             "jestConfig": "libs/app0/lib0/childlib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib0"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib0"
+          ]
         }
       },
       "schematics": {}
@@ -284,7 +308,9 @@
             "jestConfig": "libs/app0/lib0/childlib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib1"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib1"
+          ]
         }
       },
       "schematics": {}
@@ -322,7 +348,9 @@
             "jestConfig": "libs/app0/lib0/childlib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib2"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib2"
+          ]
         }
       },
       "schematics": {}
@@ -360,7 +388,9 @@
             "jestConfig": "libs/app0/lib0/childlib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib3"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib3"
+          ]
         }
       },
       "schematics": {}
@@ -398,7 +428,9 @@
             "jestConfig": "libs/app0/lib0/childlib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib4"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib4"
+          ]
         }
       },
       "schematics": {}
@@ -436,7 +468,9 @@
             "jestConfig": "libs/app0/lib0/childlib5/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib5"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib5"
+          ]
         }
       },
       "schematics": {}
@@ -474,7 +508,9 @@
             "jestConfig": "libs/app0/lib0/childlib6/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib6"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib6"
+          ]
         }
       },
       "schematics": {}
@@ -512,7 +548,9 @@
             "jestConfig": "libs/app0/lib0/childlib7/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib7"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib7"
+          ]
         }
       },
       "schematics": {}
@@ -550,7 +588,9 @@
             "jestConfig": "libs/app0/lib0/childlib8/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib8"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib8"
+          ]
         }
       },
       "schematics": {}
@@ -588,7 +628,9 @@
             "jestConfig": "libs/app0/lib0/childlib9/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib0/childlib9"]
+          "outputs": [
+            "coverage/libs/app0/lib0/childlib9"
+          ]
         }
       },
       "schematics": {}
@@ -626,7 +668,9 @@
             "jestConfig": "libs/app0/lib1/lib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/lib1"]
+          "outputs": [
+            "coverage/libs/app0/lib1/lib1"
+          ]
         }
       },
       "schematics": {}
@@ -664,7 +708,9 @@
             "jestConfig": "libs/app0/lib1/childlib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib0"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib0"
+          ]
         }
       },
       "schematics": {}
@@ -702,7 +748,9 @@
             "jestConfig": "libs/app0/lib1/childlib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib1"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib1"
+          ]
         }
       },
       "schematics": {}
@@ -740,7 +788,9 @@
             "jestConfig": "libs/app0/lib1/childlib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib2"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib2"
+          ]
         }
       },
       "schematics": {}
@@ -778,7 +828,9 @@
             "jestConfig": "libs/app0/lib1/childlib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib3"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib3"
+          ]
         }
       },
       "schematics": {}
@@ -816,7 +868,9 @@
             "jestConfig": "libs/app0/lib1/childlib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib4"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib4"
+          ]
         }
       },
       "schematics": {}
@@ -854,7 +908,9 @@
             "jestConfig": "libs/app0/lib1/childlib5/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib5"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib5"
+          ]
         }
       },
       "schematics": {}
@@ -892,7 +948,9 @@
             "jestConfig": "libs/app0/lib1/childlib6/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib6"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib6"
+          ]
         }
       },
       "schematics": {}
@@ -930,7 +988,9 @@
             "jestConfig": "libs/app0/lib1/childlib7/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib7"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib7"
+          ]
         }
       },
       "schematics": {}
@@ -968,7 +1028,9 @@
             "jestConfig": "libs/app0/lib1/childlib8/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib8"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib8"
+          ]
         }
       },
       "schematics": {}
@@ -1006,7 +1068,9 @@
             "jestConfig": "libs/app0/lib1/childlib9/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib1/childlib9"]
+          "outputs": [
+            "coverage/libs/app0/lib1/childlib9"
+          ]
         }
       },
       "schematics": {}
@@ -1044,7 +1108,9 @@
             "jestConfig": "libs/app0/lib2/lib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/lib2"]
+          "outputs": [
+            "coverage/libs/app0/lib2/lib2"
+          ]
         }
       },
       "schematics": {}
@@ -1082,7 +1148,9 @@
             "jestConfig": "libs/app0/lib2/childlib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib0"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib0"
+          ]
         }
       },
       "schematics": {}
@@ -1120,7 +1188,9 @@
             "jestConfig": "libs/app0/lib2/childlib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib1"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib1"
+          ]
         }
       },
       "schematics": {}
@@ -1158,7 +1228,9 @@
             "jestConfig": "libs/app0/lib2/childlib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib2"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib2"
+          ]
         }
       },
       "schematics": {}
@@ -1196,7 +1268,9 @@
             "jestConfig": "libs/app0/lib2/childlib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib3"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib3"
+          ]
         }
       },
       "schematics": {}
@@ -1234,7 +1308,9 @@
             "jestConfig": "libs/app0/lib2/childlib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib4"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib4"
+          ]
         }
       },
       "schematics": {}
@@ -1272,7 +1348,9 @@
             "jestConfig": "libs/app0/lib2/childlib5/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib5"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib5"
+          ]
         }
       },
       "schematics": {}
@@ -1310,7 +1388,9 @@
             "jestConfig": "libs/app0/lib2/childlib6/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib6"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib6"
+          ]
         }
       },
       "schematics": {}
@@ -1348,7 +1428,9 @@
             "jestConfig": "libs/app0/lib2/childlib7/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib7"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib7"
+          ]
         }
       },
       "schematics": {}
@@ -1386,7 +1468,9 @@
             "jestConfig": "libs/app0/lib2/childlib8/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib8"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib8"
+          ]
         }
       },
       "schematics": {}
@@ -1424,7 +1508,9 @@
             "jestConfig": "libs/app0/lib2/childlib9/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib2/childlib9"]
+          "outputs": [
+            "coverage/libs/app0/lib2/childlib9"
+          ]
         }
       },
       "schematics": {}
@@ -1462,7 +1548,9 @@
             "jestConfig": "libs/app0/lib3/lib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/lib3"]
+          "outputs": [
+            "coverage/libs/app0/lib3/lib3"
+          ]
         }
       },
       "schematics": {}
@@ -1500,7 +1588,9 @@
             "jestConfig": "libs/app0/lib3/childlib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib0"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib0"
+          ]
         }
       },
       "schematics": {}
@@ -1538,7 +1628,9 @@
             "jestConfig": "libs/app0/lib3/childlib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib1"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib1"
+          ]
         }
       },
       "schematics": {}
@@ -1576,7 +1668,9 @@
             "jestConfig": "libs/app0/lib3/childlib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib2"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib2"
+          ]
         }
       },
       "schematics": {}
@@ -1614,7 +1708,9 @@
             "jestConfig": "libs/app0/lib3/childlib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib3"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib3"
+          ]
         }
       },
       "schematics": {}
@@ -1652,7 +1748,9 @@
             "jestConfig": "libs/app0/lib3/childlib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib4"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib4"
+          ]
         }
       },
       "schematics": {}
@@ -1690,7 +1788,9 @@
             "jestConfig": "libs/app0/lib3/childlib5/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib5"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib5"
+          ]
         }
       },
       "schematics": {}
@@ -1728,7 +1828,9 @@
             "jestConfig": "libs/app0/lib3/childlib6/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib6"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib6"
+          ]
         }
       },
       "schematics": {}
@@ -1766,7 +1868,9 @@
             "jestConfig": "libs/app0/lib3/childlib7/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib7"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib7"
+          ]
         }
       },
       "schematics": {}
@@ -1804,7 +1908,9 @@
             "jestConfig": "libs/app0/lib3/childlib8/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib8"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib8"
+          ]
         }
       },
       "schematics": {}
@@ -1842,7 +1948,9 @@
             "jestConfig": "libs/app0/lib3/childlib9/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib3/childlib9"]
+          "outputs": [
+            "coverage/libs/app0/lib3/childlib9"
+          ]
         }
       },
       "schematics": {}
@@ -1880,7 +1988,9 @@
             "jestConfig": "libs/app0/lib4/lib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/lib4"]
+          "outputs": [
+            "coverage/libs/app0/lib4/lib4"
+          ]
         }
       },
       "schematics": {}
@@ -1918,7 +2028,9 @@
             "jestConfig": "libs/app0/lib4/childlib0/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib0"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib0"
+          ]
         }
       },
       "schematics": {}
@@ -1956,7 +2068,9 @@
             "jestConfig": "libs/app0/lib4/childlib1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib1"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib1"
+          ]
         }
       },
       "schematics": {}
@@ -1994,7 +2108,9 @@
             "jestConfig": "libs/app0/lib4/childlib2/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib2"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib2"
+          ]
         }
       },
       "schematics": {}
@@ -2032,7 +2148,9 @@
             "jestConfig": "libs/app0/lib4/childlib3/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib3"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib3"
+          ]
         }
       },
       "schematics": {}
@@ -2070,7 +2188,9 @@
             "jestConfig": "libs/app0/lib4/childlib4/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib4"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib4"
+          ]
         }
       },
       "schematics": {}
@@ -2108,7 +2228,9 @@
             "jestConfig": "libs/app0/lib4/childlib5/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib5"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib5"
+          ]
         }
       },
       "schematics": {}
@@ -2146,7 +2268,9 @@
             "jestConfig": "libs/app0/lib4/childlib6/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib6"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib6"
+          ]
         }
       },
       "schematics": {}
@@ -2184,7 +2308,9 @@
             "jestConfig": "libs/app0/lib4/childlib7/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib7"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib7"
+          ]
         }
       },
       "schematics": {}
@@ -2222,7 +2348,9 @@
             "jestConfig": "libs/app0/lib4/childlib8/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib8"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib8"
+          ]
         }
       },
       "schematics": {}
@@ -2260,7 +2388,9 @@
             "jestConfig": "libs/app0/lib4/childlib9/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/app0/lib4/childlib9"]
+          "outputs": [
+            "coverage/libs/app0/lib4/childlib9"
+          ]
         }
       },
       "schematics": {}
